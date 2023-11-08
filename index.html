@@ -6,51 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    /* Selectores */
+    /* Combinadores  */
 
-        /* all * */
-        * body {
+        /* decendientes */
+        section p {
+            color: lime;
+        }
+
+        /* Hijo directo */
+        article > div {
             background: rgb(80, 189, 247);
         }
-
-        /* elemento */
-        main {
-            background: palegreen;
-            border: solid;
+        article > div > div { /*.son*/
+            background: white;
         }
 
-        /* clase */
-        .section1 {
-            background: palevioletred;
+        /* elementos adyacentes */
+        div + p {
+            background: red;
         }
 
-        /* ID */
-        #section2 {
-            background: palegoldenrod;
-        }
-
-        p[is="p"] {
-            color: rgb(142, 142, 142);
+        /* elementos hermanos */
+        p ~ strong{
+            background: powderblue;
         }
     </style>
 </head>
-
-<body>
-    <p>Este es el parrfo del body y es blue</p>
-    <main>
-        <p>Este es el parrfo del main y es green</p>
-        <section class="section1">
-            <p>Este es el parrfo de la sección 1</p>
-            <p>Esta sección tine una clase</p>
-            <p>Toda la sección 1 es de color rosa</p>
-        </section>
-        <section id="section2">
-            <p>Este es el parrfo de la sección 2</p>
-            <p>Esta sección tine un ID</p>
-            <p>Toda la sección 1 es de color amarillo</p>
-        </section>
-        <p is="p">Este ultimo parrafo es gris, porque es selector de atributo</p>
-    </main>
-</body>
-
+<Body>
+    <section>
+        <article>
+            <p>Parrafo de articulo 1</p> 
+            <div>
+                No, soy un div
+                <div class="son">
+                    No, yo soy tu hijo
+                </div>
+                <p>Claro!, y yo no soy parrafo que esta al lado de un div</p>
+            </div>  
+        </article>
+        <article>
+            <p>Soy un parrafo del articulo 2</p>
+            <strong>Y yo, soy tu hermano fuerte y azul</strong>
+            <br>
+            <strong>Y yo, soy tu hermano fuerte y azul</strong>     
+        </article>
+    </section>
+</Body>
 </html>
