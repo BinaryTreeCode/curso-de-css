@@ -6,50 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    /* Combinadores  */
-
-        /* decendientes */
-        section p {
-            color: lime;
+        /* pseudoclases */
+        P {
+            color: rgb(102, 150, 56);
+            /*aguacate*/
         }
 
-        /* Hijo directo */
-        article > div {
-            background: rgb(80, 189, 247);
-        }
-        article > div > div { /*.son*/
-            background: white;
+        p:hover {
+            color: salmon;
         }
 
-        /* elementos adyacentes */
-        div + p {
+        p::first-letter {
+            color: rebeccapurple;
+        }
+
+        p::before {
+            content: "|😽";
+        }
+
+        p:hover::after {
+            content: " ...🐈‍⬛";
+        }
+
+        div p:nth-child(2) {
+            color: powderblue;
+        }
+
+        form input:nth-child(1)::placeholder {
+            color: blue;
+        }
+
+        form input:nth-child(1):focus {
+            background: blue;
+        }
+
+        form input:nth-child(3)::placeholder {
+            color: red;
+        }
+
+        form input:nth-child(3):focus {
             background: red;
         }
 
-        /* elementos hermanos */
-        p ~ strong{
-            background: powderblue;
+        button:active {
+            color: green;
         }
+
+        form+div p:nth-child(1)::selection {
+            color: slateblue;
+        }
+
+        form+div p:nth-child(2)::spelling-error  {
+            text-decoration: wavy red;
+        }
+
     </style>
 </head>
+
 <Body>
-    <section>
-        <article>
-            <p>Parrafo de articulo 1</p> 
-            <div>
-                No, soy un div
-                <div class="son">
-                    No, yo soy tu hijo
-                </div>
-                <p>Claro!, y yo no soy parrafo que esta al lado de un div</p>
-            </div>  
-        </article>
-        <article>
-            <p>Soy un parrafo del articulo 2</p>
-            <strong>Y yo, soy tu hermano fuerte y azul</strong>
-            <br>
-            <strong>Y yo, soy tu hermano fuerte y azul</strong>     
-        </article>
-    </section>
+    <p>change color? | :hover</p>
+    <div>
+        <p>Aprender es</p>
+        <p>muy bueno</p>
+        <p>para tu felicidad</p>
+    </div>
+    <form action="">
+        <input type="text" placeholder="Teem blue">
+        <br>
+        <input type="text" placeholder="Teem red">
+        <br>
+        <button type="reset">change color!</button>
+    </form>
+    <div>
+        <p>
+            finalmente en este asombroso circo digital
+            si me selecionas cambiare de color?
+        </p>
+        <p contenteditable spellcheck="true">
+            No seas duro con tigo mismo, yo lo sere nsdns
+        </p>
+    </div>
 </Body>
+
 </html>
