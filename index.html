@@ -6,86 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* pseudoclases */
-        P {
-            color: rgb(102, 150, 56);
-            /*aguacate*/
-        }
-
-        p:hover {
-            color: salmon;
-        }
-
-        p::first-letter {
-            color: rebeccapurple;
-        }
-
-        p::before {
-            content: "|😽";
-        }
-
-        p:hover::after {
-            content: " ...🐈‍⬛";
-        }
-
-        div p:nth-child(2) {
-            color: powderblue;
-        }
-
-        form input:nth-child(1)::placeholder {
+        * {
             color: blue;
         }
-
-        form input:nth-child(1):focus {
-            background: blue;
+        h1 {
+            color: brown;
+        }
+        .h1 {
+            color: aqua;
+        }
+        #h1 {
+            color: blueviolet;
+        }
+        *h1 .h1 #h1 {
+            color:crimson;
         }
 
-        form input:nth-child(3)::placeholder {
-            color: red;
+        * {
+            color: powderblue !important;
         }
-
-        form input:nth-child(3):focus {
-            background: red;
-        }
-
-        button:active {
-            color: green;
-        }
-
-        form+div p:nth-child(1)::selection {
-            color: slateblue;
-        }
-
-        form+div p:nth-child(2)::spelling-error  {
-            text-decoration: wavy red;
-        }
-
     </style>
 </head>
-
 <Body>
-    <p>change color? | :hover</p>
-    <div>
-        <p>Aprender es</p>
-        <p>muy bueno</p>
-        <p>para tu felicidad</p>
-    </div>
-    <form action="">
-        <input type="text" placeholder="Teem blue">
-        <br>
-        <input type="text" placeholder="Teem red">
-        <br>
-        <button type="reset">change color!</button>
-    </form>
-    <div>
+    <h1 class="h1" id="h1" style="color: gray;">
+        De que color soy
         <p>
-            finalmente en este asombroso circo digital
-            si me selecionas cambiare de color?
+            juega con mis estilos en la terminal
+            <br>
+            y veras mi importancia
         </p>
-        <p contenteditable spellcheck="true">
-            No seas duro con tigo mismo, yo lo sere nsdns
-        </p>
-    </div>
+    </h1>
 </Body>
 
 </html>
