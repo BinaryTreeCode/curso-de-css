@@ -6,36 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
-            color: blue;
+        body {
+            margin: 0;
         }
-        h1 {
-            color: brown;
+        .div {
+            background: aquamarine;
+            width: 200px;
+            height: 200px;
+            margin: 100px;
         }
-        .h1 {
-            color: aqua;
+        a {
+            background: salmon;
+            width: 200px;
+            height: 200px;
+            margin: 100px;
         }
-        #h1 {
-            color: blueviolet;
-        }
-        *h1 .h1 #h1 {
-            color:crimson;
-        }
-
-        * {
-            color: powderblue !important;
+        button {
+            background: lightskyblue;
+            width: 200px;
+            height: 200px;
+            margin: 100px;
         }
     </style>
 </head>
 <Body>
-    <h1 class="h1" id="h1" style="color: gray;">
-        De que color soy
-        <p>
-            juega con mis estilos en la terminal
-            <br>
-            y veras mi importancia
-        </p>
-    </h1>
-</Body>
+    <div class="div">
+        Hola soy un div, hacer de tipo bloque puedes hacer lo que quieras con migo,
+        puedo crecer tanto como quieras pero no comparto linea, anque si tengo margenes
+    </div>
+    <a>
+        Soy etiqueta a, y tengo un display inline esto significa:
+        <br>
+        1 no ocupo mas que mi contenido
+        <br>
+        2 solo tengo margenes laterales (por eso, mi primera linea esta corrida)
+        <br>
+        3 Y no puedes hacer crecer mi tamaño
+        <br>
+        4 comparto la liena en el viewport
+    </a>
+    <a href="./index.html">Hola yo soy su hermano y estamos compartiendo</a>
+    <button>
+        Es ovio que soy un boton real, yo tengo un display de tipo inline-bloc.
+        <br>
+        Ose tengo lo mejor del bloc y inline: ocupo solo lo nesesario pero puedes 
+        <br>
+        aumentar mi tamaño y comparto mi linea
+    </button>
 
+    <div style="margin-top: 100px;">fin</div>
+</Body>
 </html>
