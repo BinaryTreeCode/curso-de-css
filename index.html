@@ -1,59 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            margin: 0;
+        .espacio {
+            display: flex;
+            background: papayawhip;
+            justify-content: space-around;
         }
-        .div {
-            background: aquamarine;
-            width: 200px;
+        .e_item {
+            width: 100px;
+            height: 30px;
+            background: peru;
+        }
+
+        .center {
+            display: flex;
+            background: peachpuff;
+            justify-content: center; /*centra los items en eje X*/
+            align-items: center; /*centra los items en eje Y*/
             height: 200px;
-            margin: 100px;
         }
-        a {
-            background: salmon;
-            width: 200px;
+        .c_item {
+            width: 50px;
+            height: 50px;
+            background: powderblue;
+        }
+        .center .c_item:nth-last-child(2n +1) {
+            background: purple;
+        }
+
+        .column {
+            display: flex;
+            background: plum;
+            justify-content: center; /*centra los items en eje X*/
+            align-items: center; /*centra los items en eje Y*/
             height: 200px;
-            margin: 100px;
+            flex-direction: column;
         }
-        button {
-            background: lightskyblue;
-            width: 200px;
+
+        .col_item {
+            width: 50px;
+            height: 50px;
+            background: khaki;
+        }
+        .column .col_item:nth-last-child(2n +1) {
+            background: rgb(139, 255, 139);
+        }
+        
+        .todo {
+            display: flex;
+            background: papayawhip;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
             height: 200px;
-            margin: 100px;
         }
+        .item {
+            width: 50px;
+            height: 30px;
+            background: peru;
+        }
+        .todo .item:nth-last-child(2n +1) {
+            background: purple;
+        }
+
+
     </style>
 </head>
-<Body>
-    <div class="div">
-        Hola soy un div, hacer de tipo bloque puedes hacer lo que quieras con migo,
-        puedo crecer tanto como quieras pero no comparto linea, anque si tengo margenes
+<body>
+    <div class="espacio">
+        <div class="e_item">Estos</div>
+        <div class="e_item">items</div>
+        <div class="e_item">estan</div>
+        <div class="e_item">espaciados</div>
     </div>
-    <a>
-        Soy etiqueta a, y tengo un display inline esto significa:
-        <br>
-        1 no ocupo mas que mi contenido
-        <br>
-        2 solo tengo margenes laterales (por eso, mi primera linea esta corrida)
-        <br>
-        3 Y no puedes hacer crecer mi tamaño
-        <br>
-        4 comparto la liena en el viewport
-    </a>
-    <a href="./index.html">Hola yo soy su hermano y estamos compartiendo</a>
-    <button>
-        Es ovio que soy un boton real, yo tengo un display de tipo inline-bloc.
-        <br>
-        Ose tengo lo mejor del bloc y inline: ocupo solo lo nesesario pero puedes 
-        <br>
-        aumentar mi tamaño y comparto mi linea
-    </button>
-
-    <div style="margin-top: 100px;">fin</div>
-</Body>
+    <br>
+    <div class="center">
+        <div class="c_item">Estos</div>
+        <div class="c_item">items</div>
+        <div class="c_item">estan</div>
+        <div class="c_item">centrados</div>
+    </div>
+    <br>
+    <div class="column">
+        <div class="col_item">estos</div>
+        <div class="col_item">items</div>
+        <div class="col_item">estan en</div>
+        <div class="col_item">columna</div>
+    </div>
+    <br>
+    <div class="todo">
+        <div class="item">estos</div>
+        <div class="item">items</div>
+        <div class="item">estan</div>
+        <div class="item">todos</div>
+    </div>
+</body>
 </html>
