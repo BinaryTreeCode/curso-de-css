@@ -5,24 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>grid</title>
     <style>
-        divv {
-            background-color: palegreen;
-            width: 20px;
-            height: 20px;
-            padding: 20px;
-            box-sizing: border-box; /*ajusta el tamaño al del width*/
-            border: 2px solid paleturquoise; /*size, style, color*/
+        
+        .flex {
+            display: flex;
+            flex-direction: column;
+            border: 1px double blue;
+        }
+        .grid {
+            display: grid;
+        }
+        .div {
             margin: 20px;
-            color: palevioletred;
+            border: 1px dashed red;
         }
     </style>
 </head>
 <body>
-    <divv>
-        Hola
-    </divv>
-    <divv>
-        Adios
-    </divv>
+    <section class="normal">
+        <div class="div">margenes colapsadas</div>
+        <div class="div"> 20 20 = 20</div>
+    </section>
+
+    <section class="flex">
+        <div class="div">margenes sin colapsar</div>
+        <div class="div"> 20 20 = 40</div>
+    </section>
+
+    <section class="grid">
+        <div class="div">margenes sin colapsar</div>
+        <div class="div"> 20 20 = 40</div>
+    </section>
+    <p>colapso o sobreposión de margenes se debe al tipo de display</p>
 </body>
 </html>
