@@ -4,73 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z_index</title>
+    <title>css units</title>
     <style>
-
-        section {
-            position: relative;
-            margin: 25px;
-
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-        #abajo {
-            color: red;
-            top: 50px;
+        html {
+            font-size: calc((100% * 10) / 16); /* 62.5% = 10px */
+            font-size: 62.5%;
         }
-
-        .container {
-            position: relative;
-            margin: 25px;
-            height: 200px;
-            width: 200px;
-        }
-        .div1 {
-            position: absolute;
-            background: chocolate;
-            border: 1px solid palegreen;
+        section div {
+            height: 16vh;  
+            font-size: 3rem;
         }
 
-        .div {
-            position: absolute;
-            border: 1px solid black;
-            height: 100px;
-            width: 100px;
-            border-radius: 75px;
+        section div:nth-child(1n +1) {
+            background-color: palevioletred;
         }
 
-        #blue {
-            background: paleturquoise;
-            z-index: 4;
-            left: 50px;
+        section div:nth-child(2n +1) {
+            background-color: palegreen;
         }
-        #red {
-            background: palevioletred;
-            z-index: 5;
-            top: 30px;
-            left: 0;
+
+        .px {
+            width: 500px;
         }
-        #yellow {
-            background: palegoldenrod;
-            z-index: 6;
-            left: 25px;
-            bottom: 1;
+        .porcentaje {
+            width: 50%;
+        }
+        .em {
+            width: 50em;
+        }
+        .rem {
+            width: 50rem;
+        }
+        .vw {
+            width: 50vw;
+        }
+        .ch {
+            width: 50ch;
         }
     </style>
 </head>
 
 <body>
+    <h1>width =</h1>
     <section>
-        <p>el orden del html afecta el z-index</p>
-        <div class="div1">Es tando arriba los elementos</div>
-        <div class="div1" id="abajo">escritos mas abajo</div>
-    </section>
-    <br>
-    <section class="container">
-        <div class="div" id="blue">
-            <p>z-index = 4</p>
-            <div class="div" id="yellow"><p>z-index = 6</p></div>
-        </div>
-        <div class="div" id="red"><p>z-index = 5</p>
-        </div>
+        <div class="px">px = 500</div>
+        <div class="porcentaje">% = 50</div>
+        <div class="rem">rem = 50</div>
+        <div class="em">em = 50</div>
+        <div class="vw">vw/vh = 50</div>
+        <div class="ch">ch = 50</div>
     </section>
 </body>
 
