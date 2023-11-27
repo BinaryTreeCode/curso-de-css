@@ -6,30 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>css units</title>
     <style>
-        * {
-            box-sizing: border-box;
+        body {
+            background-color: black;
             margin: 0;
-            padding: 0;
-        }
-        html {
-            font-size: calc((100% * 10) / 16); /* 62.5% = 10px */
-            font-size: 62.5%;
-        }
-        section div {
-            height: 16vh;  
-            font-size: 3rem;
         }
 
-        section div:nth-child(1n +1) {
-            background-color: palevioletred;
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:  100vw;
+            height: 100vh;
+            margin: 0;
         }
 
         section div:nth-child(2n +1) {
             background-color: palegreen;
         }
 
-        .px {
-            width: 500px;
+        .card {
+            width:  50vw;
+            height: 75vh;
+            background-color: rgb(21, 127, 202);
+            border-radius: 3%;
+            overflow: hidden; 
+
+            -webkit-box-shadow: 0px 0px 32px -2px rgba(255, 255, 255, 0.28);
+            -moz-box-shadow: 0px 0px 32px -2px rgba(255, 255, 255, 0.28);
+            box-shadow: 0px 0px 32px -2px rgba(255, 255, 255, 0.28);
         }
         .porcentaje {
             width: 50%;
@@ -40,11 +44,45 @@
         .rem {
             width: 50rem;
         }
-        .vw {
-            width: 50vw;
+
+        .paws img {
+            width: 30%;
+            position: absolute;
+            bottom: 1;
+            top: -45%;
+            height: auto;
         }
         .ch {
             width: 50ch;
+        }
+
+        /* queri */
+
+        @media (max-width: 501px) {
+        .card {
+            width:  100vw;
+            height: 100vh;
+            border-radius: 0%;
+        }
+
+        .gatos {
+            object-fit: cover;
+            object-position: 30% 0;
+        }
+        
+        .paws {
+            background: rgb(21, 127, 202);
+        }
+        
+        p {
+            font-size: 4rem;
+        }
+
+        .paws img {
+            width: 35%;
+            bottom: 1;
+            top: -50%;
+        }
         }
     </style>
 </head>
